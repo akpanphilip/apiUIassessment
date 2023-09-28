@@ -1,0 +1,18 @@
+.header {
+  background: #fff;
+  box-shadow: 0px 4px 5px 0px rgba(29, 78, 216, 0.05);
+  display: flex;
+  align-items: center;
+  color: black;
+  width: auto;
+  height: 80px;
+  padding: 50px;
+  margin-left: 100px;
+}
+.header a {
+  padding: 10px 50px;
+  border-left: 1px solid #f3f3f3;
+}
+.header a:first-child {
+  border: none;
+}

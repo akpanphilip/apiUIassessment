@@ -1,0 +1,13 @@
+.card {
+  margin-bottom: 50px;
+  border-radius: 20px;
+}
+.card-title {
+  background: #d0f7fa;
+  border-radius: 20px 20px 0px 0px;
+  font-size: 18px;
+  color: #000;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
