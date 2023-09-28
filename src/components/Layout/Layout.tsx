@@ -14,6 +14,7 @@ const Layout = ({ children }: LayoutProps) => {
       <section className="main-section">
         <Header />
         <div className="main-in">
+
           {children}
         </div>
       </section>
@@ -22,3 +23,4 @@ const Layout = ({ children }: LayoutProps) => {
 };
 
 export default Layout;
+

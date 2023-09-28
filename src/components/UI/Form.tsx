@@ -1,20 +1,39 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable @typescript-eslint/ban-types */
+/* eslint-disable no-irregular-whitespace */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import "./Form.css";
 import { Checkbox } from "antd";
-import type { CheckboxChangeEvent } from "antd/es/checkbox";
 import { Switch } from "antd";
 import { Col, Row } from "antd";
 import { PlusOutlined } from "@ant-design/icons";
-type Props = {};
-// const onChangeCheckBox = (e: CheckboxChangeEvent) => {
-//   console.log(`checked = ${e.target.checked}`);
-// };
-// const onChangeSwitch = (checked: boolean) => {
-//   console.log(`switch to ${checked}`);
-// };
+import ItemForm from "../ItemForm/ItemForm";
+import { useState } from "react";
 
-const Form = (props: Props) => {
+const Form = () => {
+  const handleItemChange = (e: React.FormEvent, item: any) => {
+    const { id, value } = e.target as HTMLInputElement;
+    console.log(id, value);
+    const updatedItem = { ...item, [id]: value };
+    const updatedData = itemData.map((dataItem) =>
+      dataItem === item ? updatedItem : dataItem
+    );
+    setItemData(updatedData);
+  };
+
+  const handleAddItem = () => {
+    setItemData([...itemData, { ...itemData[0] }]); // Add a new set of input fields with initial values
+  };
+
+  const handleRemove = (index: any) => {
+    const updatedData = itemData.filter((_, i) => i !== index);
+    setItemData(updatedData);
+  };
+
+  const [itemData, setItemData] = useState([
+    {
+      questionaire: "",
+    },
+  ]);
+
   return (
     <>
       <div className="form-group">
@@ -169,9 +188,23 @@ const Form = (props: Props) => {
         </Row>
         <input type="email" />
       </div>
-      <div className="add-question">
+      <div className="add-question" onClick={handleAddItem}>
         <PlusOutlined className="thick-icon" />
         <span>Add a question</span>
+      </div>
+
+      <div className="additional-questions">
+        {itemData.map((item, index) => (
+          <div key={index}>
+            <ItemForm
+              item={item}
+              itemData={itemData}
+              index={index}
+              handleItemChange={handleItemChange}
+              handleRemove={handleRemove}
+            />
+          </div>
+        ))}
       </div>
     </>
   );

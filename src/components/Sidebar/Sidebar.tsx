@@ -1,26 +1,26 @@
 /* eslint-disable @typescript-eslint/ban-types */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import { MenuOutlined, HomeOutlined, ProfileOutlined } from "@ant-design/icons";
+import menu from "../../assets/menu.png";
+import home from "../../assets/home.png";
+import file from "../../assets/file.png";
 import "./Sidebar.css";
-type Props = {};
 
-const Sidebar = (props: Props) => {
+const Sidebar = () => {
   return (
     <div className="sidebar">
       <ul>
         <li>
           <a href="#">
-            <MenuOutlined />
+            <img src={menu} alt="" />
           </a>
         </li>
         <li>
           <a href="#">
-            <HomeOutlined />
+            <img src={home} alt="" />
           </a>
         </li>
         <li>
           <a href="#">
-            <ProfileOutlined />
+            <img src={file} alt="" />
           </a>
         </li>
       </ul>
