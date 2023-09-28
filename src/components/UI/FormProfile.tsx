@@ -2,19 +2,11 @@
 /* eslint-disable @typescript-eslint/ban-types */
 import "./Form.css";
 import { Checkbox } from "antd";
-import type { CheckboxChangeEvent } from "antd/es/checkbox";
 import { Switch } from "antd";
 import { Col, Row } from "antd";
 import { PlusOutlined } from "@ant-design/icons";
-type Props = {};
-// const onChangeCheckBox = (e: CheckboxChangeEvent) => {
-//   console.log(`checked = ${e.target.checked}`);
-// };
-// const onChangeSwitch = (checked: boolean) => {
-//   console.log(`switch to ${checked}`);
-// };
 
-const FormProfile = (props: Props) => {
+const FormProfile = () => {
   return (
     <>
       <div className="form-group">
@@ -91,6 +83,8 @@ const FormProfile = (props: Props) => {
         <PlusOutlined className="thick-icon" />
         <span>Add a question</span>
       </div>
+
+     
     </>
   );
 };

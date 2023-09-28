@@ -1,6 +1,10 @@
 .card {
   margin-bottom: 50px;
+  height: auto;
+  width: 500px;
   border-radius: 20px;
+  background: #fff;
+  box-shadow: 3px 3px 14px 0px rgba(190, 190, 190, 0.3);
 }
 .card-title {
   background: #d0f7fa;
@@ -10,4 +14,15 @@
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 500;
+  padding: 26px;
+  margin-bottom: 16px;
+}
+.card-body {
+  padding: 26px;
+}
+
+@media screen and (max-width: 890px) {
+  .card {
+    width: 100%;
+  }
 }

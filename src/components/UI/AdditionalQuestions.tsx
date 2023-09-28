@@ -1,11 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/ban-types */
-import React from "react";
 import "./Form.css";
-import { Checkbox } from "antd";
-import type { CheckboxChangeEvent } from "antd/es/checkbox";
-import { Switch } from "antd";
-import { Col, Row, Button } from "antd";
+import { Button } from "antd";
 import {
   PlusOutlined,
   EditOutlined,
@@ -13,9 +9,8 @@ import {
   CloseOutlined,
 } from "@ant-design/icons";
 
-type Props = {};
 
-const AdditionalQuestions = (props: Props) => {
+const AdditionalQuestions = () => {
   return (
     <>
       <div className="form-group">
@@ -72,7 +67,7 @@ const AdditionalQuestions = (props: Props) => {
           <PlusOutlined />
         </div>
 
-        <div className="additional-question-review">
+        <div className="additional-question-review remove-border">
           <span>Have you ever been rejected by the UK embassy?</span>
           <EditOutlined />
         </div>

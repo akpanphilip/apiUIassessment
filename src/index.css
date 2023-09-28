@@ -15,8 +15,55 @@
   padding: 50px;
   margin-left: 100px;
 }
+@media screen and (max-width: 890px) {
+  .main-in {
+    padding: 10px;
+    margin-left: 50px;
+  }
+}
 .base-text {
   color: #979797;
   font-size: 14px;
   font-weight: 400;
+}
+.remove-border {
+  border: none !important;
+}
+.additional-questions {
+  width: 100%;
+  height: auto;
+  /* background: red; */
+  margin-top: 50px;
+}
+.card-title-100 {
+  border-radius: 20px 20px 0px 0px;
+  font-size: 18px;
+  color: #000;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+.card-drop-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* . */
+.wrap-card-drop{
+  margin-bottom: 40px;
+}
+.wrap-card-drop select {
+  width: 100%;
+  background: #fff;
+  height: 50px;
+  border-bottom: none;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #000;
+  margin: 7px 0;
+}
+.wrap-card-drop select:focus {
+  border: 1px solid #000;
+}
+.add-question{
+  cursor: pointer;
 }
